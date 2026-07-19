@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LuckyBoard</title>
+
+<link rel="stylesheet" href="css/home.css">
+
+</head>
+
+<body>
+
+    <div class="profile">
+
+   <img id="playerPhoto" src="">
+
+    <div class="info">
+
+        <h2 id="playerName">
+        </h2>
+
+        <p>
+        🪙 <span id="coins">1000</span>
+        </p>
+
+    </div>
+
+    <button id="profileSettingsBtn">
+        ⚙️
+    </button>
+
+</div>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>🎲 LuckyBoard</h1>
+
+    <p id="welcome"></p>
+
+    <div class="menu">
+
+        <button id="createRoomBtn">
+            🎮 إنشاء غرفة
+        </button>
+
+        <button id="joinRoomBtn">
+            🔑 الانضمام لغرفة
+        </button>
+
+        <button id="leaderboardBtn">
+            🏆 المتصدرون
+        </button>
+
+        <button id="settingsBtn">
+            ⚙️ الإعدادات
+        </button>
+
+    </div>
+
+</div>
+
+<!-- نافذة إنشاء غرفة -->
+
+<div class="modal" id="createModal">
+
+<div class="modalBox">
+
+<h2>🎮 إنشاء غرفة</h2>
+
+<label>عدد اللاعبين</label>
+
+<select id="maxPlayers">
+
+<option>2</option>
+<option>3</option>
+<option selected>4</option>
+<option>5</option>
+<option>6</option>
+
+</select>
+
+<button id="createGame">
+
+إنشاء
+
+</button>
+
+</div>
+
+</div>
+
+<!-- نافذة الانضمام -->
+
+<div class="modal" id="joinModal">
+
+<div class="modalBox">
+
+<h2>
+
+🔑 الانضمام لغرفة
+
+</h2>
+
+<input
+id="roomCode"
+placeholder="أدخل كود الغرفة">
+
+<button id="joinGame">
+
+دخول
+
+</button>
+
+</div>
+
+</div>
+
+<div class="settingsModal" id="settingsModal">
+
+    <div class="settingsBox">
+
+        <h2>⚙️ الإعدادات</h2>
+
+        <img id="settingsPhoto">
+
+        <h3 id="settingsName"></h3>
+
+        <p id="settingsEmail"></p>
+
+        <button id="logoutBtn">
+            🚪 تسجيل خروج
+        </button>
+
+        <button id="closeSettings">
+            إغلاق
+        </button>
+
+    </div>
+
+</div>
+
+<!-- Settings -->
+<div class="settingsModal" id="settingsModal">
+
+    <div class="settingsBox">
+
+        <button class="closeSettings" id="closeSettings">
+            ✖
+        </button>
+
+        <img id="settingsPhoto">
+
+        <h2 id="settingsName"></h2>
+
+        <p id="settingsEmail"></p>
+
+        <button id="logoutBtn">
+            🚪 تسجيل الخروج
+        </button>
+
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+
+</html>

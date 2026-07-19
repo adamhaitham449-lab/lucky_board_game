@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>LuckyBoard</title>
+
+<link rel="stylesheet" href="css/game.css">
+
+</head>
+
+<body>
+
+<div id="topBar">
+
+    <h1>🎲 LuckyBoard</h1>
+
+    <div id="roomInfo">
+
+        كود الغرفة :
+
+        <span id="roomCode"></span>
+
+    </div>
+
+</div>
+
+<div id="gameContainer">
+
+    <div id="board">
+
+<div id="gameBoard">
+
+</div>
+
+</div>
+
+    <div id="sidePanel">
+
+        <div class="box">
+
+            <h3>🎲 النرد</h3>
+
+            <h1 id="dice">
+
+                🎲
+
+            </h1>
+
+            <button id="rollDice">
+
+                رمي النرد
+
+            </button>
+
+        </div>
+
+        <div class="box">
+
+            <h3>
+
+                👥 اللاعبون
+
+            </h3>
+
+            <ul id="players">
+
+            </ul>
+
+        </div>
+
+        <div class="box">
+
+            <h3>
+
+                💰 رصيدك
+
+            </h3>
+
+            <h2 id="money">
+
+                1500$
+
+            </h2>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+
+<script src="js/game.js"></script>
+
+<script src="js/board.js"></script>
+
+</body>
+
+</html>
