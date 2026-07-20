@@ -317,6 +317,8 @@ console.log("Rooms:", Object.keys(rooms));
 // تشغيل السيرفر
 // =============================
 
-server.listen(PORT, () => {
+const PORT = process.env.PORT || 3001;
+
+server.listen(PORT, "0.0.0.0", () => {
     console.log(`🚀 LuckyBoard Running on port ${PORT}`);
 });
