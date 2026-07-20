@@ -21,8 +21,11 @@ app.use(express.static(path.join(__dirname, "../client")));
 app.use(express.static(path.join(__dirname, "../client")));
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/login.html"));
+    res.status(200).sendFile(
+        path.join(__dirname, "../client/login.html")
+    );
 });
+
 // =============================
 // جميع الغرف
 // =============================
