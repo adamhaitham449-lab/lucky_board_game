@@ -318,7 +318,5 @@ console.log("Rooms:", Object.keys(rooms));
 // =============================
 
 server.listen(PORT, () => {
-
-    console.log(`🚀 LuckyBoard Running : http://localhost:${PORT}`);
-
+    console.log(`🚀 LuckyBoard Running on port ${PORT}`);
 });
