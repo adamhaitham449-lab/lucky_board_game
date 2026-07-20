@@ -10,7 +10,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server);
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 // =============================
 // إعدادات الموقع
@@ -18,8 +18,10 @@ const PORT = 3001;
 
 app.use(express.static(path.join(__dirname, "../client")));
 
-app.get("/", (req, res) => {
-    res.redirect("/login.html");
+app.get("/", (req,res)=>{
+    res.sendFile(
+        path.join(__dirname,"../client/home.html")
+    );
 });
 // =============================
 // جميع الغرف
